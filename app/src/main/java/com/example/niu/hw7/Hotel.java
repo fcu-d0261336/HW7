@@ -12,14 +12,17 @@ public class Hotel {
     private String Add;
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getAdd() {
+
         return Add;
     }
 
@@ -28,6 +31,7 @@ public class Hotel {
     }
 
     public Bitmap getImgUrl() {
+
         return imgUrl;
     }
 

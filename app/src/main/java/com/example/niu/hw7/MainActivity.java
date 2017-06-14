@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new HotelArrayAdapter(this, new ArrayList<Hotel>());
         lvHotels.setAdapter(adapter);
 
-        getHetelsFromFirebase();
+        getHotelsFromFirebase();
     }
 
     class FirebaseThread extends Thread{
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         private DataSnapshot dataSnapshot;
 
         public FirebaseThread(DataSnapshot dataSnapshot){
+
             this.dataSnapshot = dataSnapshot;
         }
 
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void getHetelsFromFirebase(){
+    private void getHotelsFromFirebase(){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("");
         myRef.addValueEventListener(new ValueEventListener() {
